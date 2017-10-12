@@ -1,0 +1,33 @@
+<div ng-controller="HomeController">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3 text-center">Welcome to my blog!</h1>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="container text-center">
+      <a href="#!/new_post" class="btn btn-primary" role="button">Create New Post</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div ng-repeat="post in posts | limitTo:3" class="post col-md-4">
+        <h4 class="">{{post.title}}</h4>
+        <p>{{post.body}}</p>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="container text-center">
+        <a href="#!/posts" class="btn btn-secondary" role="button">View All Posts</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- <footer>
+    <p>© Lily Pace 2017</p>
+  </footer> -->
+</div>
